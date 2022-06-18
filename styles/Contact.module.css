@@ -1,0 +1,61 @@
+.wrapper {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        width: 75%;
+    }
+}
+
+.wrapper .span {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper * {
+    width: 100%;
+    margin: 0.5rem 0;
+    gap: 1rem;
+}
+
+.wrapper input[type='text'],
+.wrapper input[type='email'],
+.wrapper textarea,
+.wrapper button {
+    padding: 0.5rem;
+    border: 1px solid #666;
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+.wrapper input:focus,
+.wrapper textarea:focus {
+    outline: none;
+    border: 1px solid var(--green-1);
+}
+
+.wrapper button {
+    padding: 0.5rem 1rem;
+    background: none;
+    transition: color 300ms ease;
+    cursor: pointer;
+}
+
+.wrapper button:hover {
+    color: white;
+    background-image: var(--gradient);
+    outline: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+@media (min-width: 600px) {
+    .wrapper button {
+        max-width: max-content;
+        align-self: flex-end;
+    }
+}

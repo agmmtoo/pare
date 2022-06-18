@@ -1,0 +1,94 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    border-radius: 1.5rem;
+    height: 100%;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+    letter-spacing: 0.2rem;
+}
+
+.wrapper:hover {
+    background: var(--gradient);
+    color: white;
+}
+
+.wrapper button {
+    display: block;
+    color: white;
+    background: var(--green-1);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.wrapper button:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.wrapper:hover h3 {
+    color: white;
+}
+
+.wrapper:hover button {
+    background: white;
+    color: var(--green-1);
+}
+
+.wrapper span {
+    font-size: xx-large;
+}
+
+.wrapper>h3 {
+    transition: all 0.5s ease;
+    font-size: x-large;
+    color: var(--green-1);
+}
+
+.wrapper a {
+    text-decoration: underline;
+    font-size: x-small;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.outerWrapper {
+    margin: 2rem 0;
+    background-image: var(--gradient);
+    border-radius: 1.5rem;
+    padding: 0.1rem;
+    width: 80%;
+    height: 25rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.outerWrapper:hover,
+div.outerWrapper:nth-of-type(2):hover {
+    background: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, var(--green-1) 0px 16px 56px;
+}
+
+div.outerWrapper:nth-of-type(2) {
+    transform: scale(1.2, 1.2);
+    background: linear-gradient(to top left, hsla(90, 100%, 50%, 1) 0%, hsla(180, 100%, 50%, 1) 100%);
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        height: 100%;
+    }
+
+    .outerWrapper {
+        margin: 0 1.5rem;
+        height: 15rem;
+    }
+
+    div.outerWrapper:nth-of-type(2) {
+        transform: scale(1.2, 1.2) translateY(-1rem);
+    }
+}
